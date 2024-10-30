@@ -1,0 +1,695 @@
+/* ここから下に記載していく */
+html {
+    scroll-padding-top: 50px;
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 14px;
+}
+p,li,dd{
+    line-height: 1.8;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* ヘッダー */
+header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    z-index: 2;
+    box-sizing: border-box;
+    background-color: #fff;
+    opacity: 0.8;
+    padding: 0 10px;
+}
+header h1 {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+header h1 img {
+    max-height: 40px;
+    width: auto;
+}
+header nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+header nav ul li:hover a{
+    color: #959F94;
+    transition: 1s;
+    transform: rotateX(360deg);
+}
+
+/* footer */
+footer{
+    padding: 20px 0;
+}
+footer p{
+    text-align: center;
+    font-size: 10px;
+}
+
+/* メインビジュアル */
+#main-v {
+    width: 100%;
+    height: 100svh;
+    background: url("../img/sp_mv.jpg") center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+#main-text {
+    position: absolute;
+    bottom: 30px;
+    right: 5%;
+    font-size: 20px;
+}
+
+/* メインコンテンツ共通 */
+main {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+main section {
+    padding: 60px 0;
+}
+.bg-sec {
+    background: #e1e9e2;
+
+}
+.br-pc{
+    display: none;
+}
+main section p {
+    text-align: center;
+    margin-bottom: 27.2px;
+}
+.sec-text p:last-child {
+    margin: 0;
+}
+h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 23.6px;
+}
+h2:has(+ .title-jp) {
+    margin: 0 0 22.8px;
+}
+.title-jp {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 46.4px;
+}
+.btn{
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    margin: 53.6px auto 0;
+}
+.btn a,.btn input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: #87a689;
+    text-decoration: none;
+    border: none;
+    appearance: none;
+    padding: 0;
+    font-size: 18px;
+}
+.btn:hover a,.btn:hover input{
+    background: #959F94;
+    transition: 1s;
+    transform: rotateX(360deg);
+}
+
+/* about */
+#about{
+    position: relative;;
+}
+#about .sec-text {
+    margin-bottom: 73.6px;
+}
+#about figure{
+    overflow: hidden;
+}
+
+/* course */
+#course{
+    position: relative;
+}
+#course p{
+    margin-bottom: 53.6px;
+}
+.course-wrap{
+    max-width: 500px;
+    margin: 0 auto;
+}
+#course-detail .course-wrap dl{
+    margin: 30px 5%;
+}
+#course-detail .course-wrap dl dt {
+    font-weight: bold;
+    margin-bottom: 33.6px;
+    font-size: 18px;
+}
+
+/* news */
+#news{
+    position: relative;
+}
+#news-area a{
+    display: block;
+    width: 100%;
+    color: #333;
+    text-decoration: none;
+}
+#news-area a:hover {
+    opacity: 0.7;
+    transition: all 0.5s ease;
+}
+#news-area a{
+    max-width: 500px;
+    margin: 10px auto;
+}
+#news-area article{
+    width: 100%;
+    display: flex;
+}
+#news-area article figure{
+    width: 40%;
+}
+#news-area article figure img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+#news-area article dl {
+    margin: 0;
+    width: 60%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#news-area article dl dt {
+    margin-bottom: 17.6px;
+}
+
+/* access */
+#access {
+    position: relative;
+}
+#access #map{
+    aspect-ratio: 3/2;
+}
+#access iframe {
+    width: 100%;
+    height: 100%;
+}
+#overview {
+    width: fit-content;
+    margin: 40px auto 0;
+}
+#overview dl {
+    display: flex;
+    align-items: center;
+    margin-bottom: 17.2px;
+}
+#overview dl:last-child {
+    margin: 0;
+}
+#overview dl dt {
+    width: 110px;
+    font-weight: normal;
+}
+
+/* contact */
+#contact .sec-text{
+    margin-bottom: 63.6px;
+}
+form{
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-top: 1px solid #333;
+}
+form fieldset{
+    border-bottom: 1px solid #333;
+    padding: 10px 0;
+}
+form fieldset > label,.legend_wrap{
+    display: block;
+    margin-bottom: 10px;
+}
+form div label {
+    display: inline;
+}
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    height: 36px;
+    box-sizing: border-box;
+}
+textarea{
+    height: 100px;
+}
+.checkbox-area div {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+.checkbox-area div:last-child {
+    margin: 0;
+}
+
+
+/* マウスアニメーション */
+.mouse-animation {
+    position: absolute;
+    z-index: 100;
+    display: block;
+    width: 50px;
+}
+#mouse {
+    right: 0;
+    top: 0;
+    animation: mouseAnime ease-in-out;
+    animation-direction: alternate;
+    animation-timeline: view();
+    animation-range: cover;
+}
+@keyframes mouseAnime {
+    0% {
+        right: 0;
+        top: 0;
+    }
+    100% {
+        right: 100vw;
+        top: 300px;
+    }
+}
+
+#mouse02 {
+    transform: scale(-1, 1);
+    left: 0;
+    top: 0;
+    animation: mouseAnime2 ease-in-out;
+    animation-timeline: view();
+    animation-range: cover;
+}
+@keyframes mouseAnime2 {
+    0% {
+        left: 0;
+        top: 0;
+    }
+
+    100% {
+        left: 100vw;
+        top: 300px;
+    }
+}
+
+#cheese {
+    left: 0;
+    top: 0;
+    animation: cheeseAnime 1s linear;
+    transform-origin: center bottom;
+    animation-timeline: view();
+    animation-range: cover;
+}
+#cheese02 {
+    right: 0;
+    top: 0;
+    animation: cheeseAnime 1s linear;
+    transform-origin: center bottom;
+    animation-direction: reverse;
+    animation-timeline: view();
+    animation-range: cover;
+}
+@keyframes cheeseAnime {
+    0% {
+        transform: scale(1.0, 1.0) translate(0%, 0%);
+        left: 0;
+        top: 0;
+    }
+
+    20% {
+        transform: scale(1.3, 0.5) translate(0%, 0%);
+    }
+
+    30% {
+        transform: scale(1.0, 1.0) translate(0%, 0%);
+    }
+
+    40% {
+        transform: scale(0.8, 1.3) translate(0%, -70%);
+    }
+
+    50% {
+        transform: scale(1.0, 1.0) translate(0%, -120%);
+    }
+
+    60% {
+        transform: scale(1.0, 1.0) translate(0%, 0%);
+    }
+
+    70% {
+        transform: scale(1.3, 0.5) translate(0%, 0%);
+    }
+
+    80% {
+        transform: scale(1.0, 1.0) translate(0%, 0%);
+    }
+
+    90% {
+        transform: scale(0.8, 1.3) translate(0%, -70%);
+    }
+
+    100% {
+        transform: scale(1.0, 1.0) translate(0%, -120%);
+        left: 100vw;
+        top: 0;
+    }
+}
+
+/* バウンドアニメーション */
+#end-anime {
+    width: 100px;
+    position: absolute;
+    z-index: 100;
+    right: 5%;
+    bottom: 0;
+}
+
+.bounce {
+    animation: 4s 0s bounce ease-in infinite;
+}
+
+@keyframes bounce {
+
+    79%,
+    90%,
+    97%,
+    100% {
+        transform: translate(0);
+    }
+
+    85% {
+        transform: translateY(-40px);
+    }
+
+    94% {
+        transform: translateY(-4px);
+    }
+
+    99% {
+        transform: translateY(-2px);
+    }
+}
+
+/* フェードインアニメーション */
+.fadeInLeft {
+    opacity: 0;
+    animation: fadeInLeft ease-in forwards 1s;
+    animation-timeline: view();
+    animation-range: entry 0% entry 80%;
+}
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fadeInRight {
+    opacity: 0;
+    animation: slideinRight ease-in forwards 1s;
+    animation-timeline: view();
+    animation-range: entry 0% entry 80%;
+}
+@keyframes slideinRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* スマホ用ハンバーガーメニューcss */
+@media screen and (max-width: 768px) {
+    /* nav */
+    .menu {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        margin-top: 50px;
+        padding: 0 0 10px 0;
+        transition: 0.3s linear;
+        transform: scale(1, 0);
+        transform-origin: top;
+        background: #fff;
+        z-index: 999;
+    }
+    .menu li {
+        border-top: 1px solid rgb(75, 75, 75);
+        padding: 15px 0;
+        margin: 0 54px;
+    }
+
+    /* メニューボタン */
+    .menu-btn {
+        display: none;
+    }
+    .menu-btn:checked~.menu {
+        transform: scale(1, 1);
+        transform-origin: top;
+        transition: 0.3 linear;
+    }
+    .menu-icon {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .navicon {
+        background: #333;
+        display: block;
+        height: 3px;
+        width: 26px;
+        position: relative;
+        transition: 0.3 linear;
+        z-index: 2;
+    }
+    .navicon:before,
+    .navicon:after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background: #333;
+        transition: 0.3s linear;
+    }
+    .navicon::before {
+        top: 9px;
+    }
+    .navicon:after {
+        bottom: 9px;
+    }
+
+    /* ハンバーガーメニューアニメーション */
+    .menu-btn:checked~.menu-icon .navicon:before {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    .menu-btn:checked~.menu-icon .navicon:after {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    .menu-btn:checked~.menu-icon .navicon {
+        background: rgba(0, 0, 0, 0);
+        transition: 0.2s linear;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    html {
+            scroll-padding-top: 100px;
+    }
+    body {
+        font-size: 16px;
+    }
+    .br-sp {
+        display: none;
+    }
+    .br-pc{
+        display: block;
+    }
+    .fixed-bg {
+        min-height: 40vh;
+    }
+
+    /* header */
+    header {
+        padding: 15px 5%;
+        display: flex;
+        height: 100px;
+        align-items: center;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+    header h1 {
+        max-width: 300px;
+    }
+    header h1 img {
+        max-height: none;
+        width: 100%;
+    }
+    header nav input {
+        display: none;
+    }
+    header nav ul{
+        display: flex;
+        gap:20px;
+    }
+    #mouse,#mouse02{
+        width: 100px;
+    }
+    /* メインビジュアル */
+    #main-v {
+        background: url("../img/mv.jpg") center no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    #main-text {
+        font-size: 24px;
+    }
+    /* about */
+
+    /* course */
+    .course-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+    }
+    #course-detail .course-wrap:nth-child(2) {
+        flex-direction: row-reverse;
+    }
+    #course-detail .course-wrap figure {
+        width: 50%;
+    }
+    #course-detail .course-wrap dl{
+        width: 50%;
+        max-width: 480px;
+        margin: 0 auto 0 50px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+    #course-detail .course-wrap:nth-child(2) dl {
+        margin: 0 50px 0 auto;
+        padding: 0 0 0 20px;
+    }
+
+    /* news */
+    #news-area {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        gap:2%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    #news-area a {
+        width: 32%;
+        max-width: 300px;
+        margin: 0;
+    }
+    #news-area article{
+        display: block;
+    }
+    #news-area article figure {
+        width: 100%;
+    }
+    #news-area article dl {
+        margin: 23.6px 0 0;
+        width: 100%;
+        padding: 0;
+    }
+    /* access */
+    #access #map {
+        aspect-ratio: 6/2;
+    }
+    #overview{
+        margin: 60px auto 0;
+    }
+    #overview dl dt {
+        width: 180px;
+    }
+
+    /* contact */
+    form {
+        width: 640px;
+        max-width: none;
+        margin: 0 auto;
+    }
+    form fieldset {
+        display: flex;
+        padding: 0;
+    }
+    form fieldset:nth-child(-n+4) {
+        align-items: center;
+    }
+    form fieldset > label,form fieldset .legend_wrap {
+        width: 240px;
+        padding: 0 64px 0 16px;
+        box-sizing: border-box;
+        line-height: 1.2;
+        margin: 0;
+    }
+    input[type=text],input[type=email],select,textarea{
+        width: 328px;
+    }
+    .input-area{
+        padding: 10px;
+        border-left: 1px solid #333;
+    }
+    form fieldset .legend_wrap,form fieldset:nth-child(6) label{
+        padding-top: 10px;
+    }
+    .checkbox-area div {
+        font-size: 14px;
+    }
+    #end-anime {
+        width: 100px;
+    }
+}
