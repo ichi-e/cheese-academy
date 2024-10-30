@@ -8,7 +8,7 @@
 
 ③DEMO
 
-デプロイしている場合はURLを記入（任意）
+https://ichi-e.github.io/kadai00_cheese/
 
 ④作ったアプリケーション用のIDまたはPasswordがある場合
 
